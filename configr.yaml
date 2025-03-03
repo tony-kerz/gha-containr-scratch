@@ -6,3 +6,4 @@ push:
     - configr.yaml
   annotations:
     foo: bar
+writeMode: true

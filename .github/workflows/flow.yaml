@@ -12,7 +12,7 @@ jobs:
       # using latest for now, but after stabilization, may want specify discret version for idempotency
       #
       image: tonykerz/containr-scratch
-      is-checkout: true
+      is-checkout: false
       # creds could be required for pull, but in this case pull is public
       # in this case creds required for push...
       #
