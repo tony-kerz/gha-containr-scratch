@@ -1,0 +1,21 @@
+name: flow
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+jobs:
+  push:
+    uses: the-watchmen/gha-containr-call/.github/workflows/flow.yaml@main
+    with:
+      config: configr.yaml
+      # using latest for now, but after stabilization, may want specify discret version for idempotency
+      #
+      image: tonykerz/containr-scratch
+      is-checkout: true
+      # creds could be required for pull, but in this case pull is public
+      # in this case creds required for push...
+      #
+      #registry-user: ${{ vars.REGISTRY_USER }}
+    #secrets:
+    #registry-pass: ${{ secrets.REGISTRY_PASS}}
